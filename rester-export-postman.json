@@ -1,0 +1,81 @@
+{
+    "info": {
+        "name": "RESTer",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Walnut Lang",
+            "item": [
+                {
+                    "name": "TodoApp",
+                    "item": [
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks",
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\"title\": \"My second todo\", \"dueDate\": {\"year\": 2024, \"month\": 5, \"day\": 12}, \"description\": \"\"}"
+                                }
+                            },
+                            "id": "rester-164",
+                            "name": "Add Task"
+                        },
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "id": "rester-159",
+                            "name": "List Tasks"
+                        },
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks/660475fa-2600-41de-9f9a-292507f75e4d/done",
+                                "method": "POST",
+                                "header": []
+                            },
+                            "id": "rester-161",
+                            "name": "Mark Task As Done"
+                        },
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks/660475fa-2600-41de-9f9a-292507f75e4d",
+                                "method": "DELETE",
+                                "header": []
+                            },
+                            "id": "rester-163",
+                            "name": "Remove Task"
+                        },
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks/660475fa-2600-41de-9f9a-292507f75e4d",
+                                "method": "GET",
+                                "header": []
+                            },
+                            "id": "rester-160",
+                            "name": "Tasks Details"
+                        },
+                        {
+                            "request": {
+                                "url": "http://localhost:8073/v1/tasks/660475fa-2600-41de-9f9a-292507f75e4d/done",
+                                "method": "DELETE",
+                                "header": []
+                            },
+                            "id": "rester-162",
+                            "name": "Unmark Task As Done"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

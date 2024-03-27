@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>TodoTask App!</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="assets/style.css" />
+	</head>
+	<body>
+		<h1>TodoTask App!</h1>
+		<form id="add-task-form">
+			<h4>Add new task</h4>
+			<label>
+				<input type="text" required placeholder="Task Title" name="title" autofocus />
+			</label>
+			<label>
+				<textarea placeholder="Description" name="description"></textarea>
+			</label>
+			<label>
+				<input type="date" required placeholder="Due Date" name="due-date" />
+			</label>
+			<button type="submit">Add</button>
+		</form>
+		<ul id="tasks"></ul>
+
+
+		<script type="module" src="assets/scripts/todotask.js"></script>
+		<script type="module">
+			/**
+			 * @var {Client} clientProxy
+			 */
+			import clientProxy from './assets/scripts/boot.js';
+			window.clientProxy = clientProxy;
+
+			import tableList from './assets/scripts/task-list.js';
+			tableList(document.getElementById('tasks'));
+		</script>
+	</body>
+</html>
